@@ -15,7 +15,7 @@
         感谢四位小组成员为此项目的辛勤付出：张看起 郑宇杰 刘芳林 傅诚！奥力给！！
       </p>
     </div>
-    <!--<img class="bg" src="../../assets/images/时现logoBg.png">-->
+    <img class="bg" src="../../assets/images/时现logoBg.png">
   </div>
 </template>
 
