@@ -82,10 +82,9 @@
         }
       },
       showMsg (res) {
-        //
         this.Msg = res.data.data
         this.Popup()
-        //反馈成功
+        //反馈成功,回到上一级页面
         if(res.data.code) {
           setTimeout(function () {
             this.$router.go(-1)
