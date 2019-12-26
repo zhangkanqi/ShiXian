@@ -13,18 +13,21 @@
      </div>
      <div class="nav">
        <div class="about">
+         <!--点击之后跳转到关于页面-->
          <router-link to="/User/about">
            <span>关于</span>
            <span class="iconfont">&#xe600;</span>
          </router-link>
        </div>
        <div class="back">
+         <!--点击之后跳转到反馈页面-->
          <router-link to="/User/suggestion">
            <span>反馈与建议</span>
            <span class="iconfont">&#xe600;</span>
          </router-link>
        </div>
        <div class="modifyPassword">
+         <!--跳转到修改密码页面-->
          <router-link to="/User/modifyPassword">
            <span>修改密码</span>
            <span class="iconfont">&#xe600;</span>
@@ -49,6 +52,7 @@
     },
     methods:{
       exitLogin () {
+        //退出登录将消除jwtToken，并返回到登录页面
         localStorage.setItem("jwtToken", null)
         this.$router.push({path : '/User/login'})
       }
