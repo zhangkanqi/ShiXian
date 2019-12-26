@@ -102,7 +102,9 @@ import './assets/iconfont/iconfont.css'
 import store from './store/store' //使用vuex
 
 //前端过滤器，对使用的ajax请求进行过滤处理
-axios.defaults.baseURL = 'https://fucheng360.top'
+// axios.defaults.baseURL = 'https://fucheng360.top'
+axios.defaults.baseURL = 'http://localhost:6789'
+
 axios.interceptors.request.use(config => {
   // console.log("request config:  ", config)
   return config
