@@ -7,6 +7,7 @@
     <div class="bg">
     <div class="classify">
       <div class="classifyTitle">分类</div>
+      <!--导航栏-->
       <div class="classifyBtn">
         <cube-tab-bar
           v-model="selectedLabelDefault"
@@ -24,7 +25,8 @@
       <div class="contactTitle">
         联系方式
       </div>
-      <input v-model="phone" class="contact_input" placeholder="请输入联系方式"/>
+      <i class="iconfont">&#xe605;</i>
+      <input v-model="phone" type="tel" class="contact_input" placeholder="请输入联系电话"/>
       <button @click="submit" class="submitBtn">提交</button>
     </div>
     </div>
@@ -56,9 +58,9 @@
       }
     },
     methods:{
-      changeBgc (index) {
-        this.inx = index
-      },
+      // changeBgc (index) {
+      //   this.inx = index
+      // },
       submit () {
         if (this.content===''){
           this.Msg = "(ง •_•)ง您的反馈不能为空哦!"
@@ -80,11 +82,13 @@
         }
       },
       showMsg (res) {
+        //
         this.Msg = res.data.data
         this.Popup()
+        //反馈成功
         if(res.data.code) {
           setTimeout(function () {
-            this.$router.push({path: '/'})
+            this.$router.go(-1)
           },500)
         }
       },
