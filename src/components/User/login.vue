@@ -1,15 +1,16 @@
 <template>
       <div class="login">
+        <!--js弹出框组件-->
         <cube-popup type="my-popup" ref="myPopup" v-model="visible" >
-      <span class="Msg">
-         {{Msg}}
-      </span>
+          <span class="Msg">{{Msg}}</span>
         </cube-popup>
       <form class="login_form">
         <img class="login_image" src="../../assets/images/login.png">
           <div class="content">
             <label class="account_number">
+              <!--使用IconFont图标-->
               <i class="iconfont">&#xe62a;</i>
+              <!--禁用autocomplete自动填充-->
               <input type="email" name="user_login"  placeholder=" 请输入邮箱地址" required="true" title="请输入邮箱地址" v-model="email" autocomplete="off">
             </label>
             <label class="account_password">
